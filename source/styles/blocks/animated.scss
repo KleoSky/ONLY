@@ -1,0 +1,195 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleFromCenter {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes iconExpandPush {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes textPushFromIcon {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.banners__slide:not(.banners__slide--active) .banner__title,
+.banners__slide:not(.banners__slide--active) .banner__subtitle,
+.banners__slide:not(.banners__slide--active) .banner__icon,
+.banners__slide:not(.banners__slide--active) .banner__icon svg,
+.banners__slide:not(.banners__slide--active) .banner__image,
+.banners__slide:not(.banners__slide--active) .banner__description,
+.banners__slide:not(.banners__slide--active) .banner__button,
+.banners__slide:not(.banners__slide--active) .banner__gallery-item,
+.footer__slogan:not(.animated) .footer__slogan-word {
+  opacity: 0;
+}
+
+
+.banners__slide--one.animated .banner__title,
+.banners__slide--two.animated .banner__title {
+  animation: fadeIn 1s ease forwards;
+}
+
+.banners__slide--one.animated .banner__subtitle--one,
+.banners__slide--one.animated .banner__image--heart,
+.banners__slide--one.animated .banner__subtitle--two,
+.banners__slide--one.animated .banner__image--building,
+.banners__slide--one.animated .banner__subtitle--three,
+.banners__slide--one.animated .banner__description,
+.banners__slide--one.animated .banner__button,
+.banners__slide--two.animated .banner__subtitle--one,
+.banners__slide--two.animated .banner__subtitle--three,
+.banners__slide--two.animated .banner__description,
+.banners__slide--two.animated .banner__button,
+.footer__slogan.animated .footer__slogan-word {
+  animation: slideUp 1.5s ease forwards;
+}
+
+.banners__slide.animated .banner__icon,
+.banners__slide.animated .banner__icon svg,
+.banners__slide--one.animated .banner__gallery-item--one,
+.banners__slide--one.animated .banner__gallery-item--two,
+.banners__slide--one.animated .banner__gallery-item--three,
+.banners__slide--one.animated .banner__gallery-item--four,
+.banners__slide--two.animated .banner__gallery-item--one,
+.banners__slide--two.animated .banner__gallery-item--two,
+.banners__slide--two.animated .banner__gallery-item--three,
+.banners__slide--two.animated .banner__gallery-item--four,
+.banners__slide--two.animated .banner__gallery-item--five,
+.banners__slide--two.animated .banner__gallery-item--six {
+  animation: scaleFromCenter 1.5s ease forwards;
+}
+
+.banners__slide--one.animated .banner__icon--two,
+.banners__slide--two.animated .banner__icon {
+  animation: iconExpandPush 1.5s ease forwards;
+}
+
+.banners__slide--one.animated .banner__subtitle--four,
+.banners__slide--two.animated .banner__subtitle--two {
+  animation: textPushFromIcon 1.5s ease forwards;
+}
+
+.banners__slide.animated .banner__title,
+.footer__slogan.animated .footer__slogan-word--one {
+  animation-delay: 0.1s;
+}
+
+.banners__slide.animated .banner__subtitle--one,
+.footer__slogan.animated .footer__slogan-word--two {
+  animation-delay: 0.3s;
+}
+
+.banners__slide.animated .banner__icon--one,
+.banners__slide.animated .banner__icon--one svg,
+.footer__slogan.animated .footer__slogan-word--three {
+  animation-delay: 0.5s;
+}
+
+.banners__slide--one.animated .banner__image--heart,
+.banners__slide--one.animated .banner__subtitle--two,
+.banners__slide--one.animated .banner__image--building,
+.banners__slide--one.animated .banner__subtitle--three,
+.banners__slide--one.animated .banner__gallery-item--one,
+.banners__slide--two.animated .banner__subtitle--two,
+.banners__slide--two.animated .banner__gallery-item--one {
+  animation-delay: 0.7s;
+}
+
+.banners__slide--one.animated .banner__icon--two,
+.banners__slide--two.animated .banner__subtitle--three {
+  animation-delay: 0.9s;
+}
+
+.banners__slide--one.animated .banner__description,
+.banners__slide--one.animated .banner__gallery-item--two,
+.banners__slide--one.animated .banner__icon--two svg {
+  animation-delay: 1s;
+}
+
+.banners__slide--one.animated .banner__subtitle--four,
+.banners__slide--one.animated .banner__gallery-item--three,
+.banners__slide--one.animated .banner__button {
+  animation-delay: 1.1s;
+}
+
+.banners__slide--one.animated .banner__gallery-item--four,
+.banners__slide--two.animated .banner__description,
+.banners__slide--two.animated .banner__gallery-item--two {
+  animation-delay: 1.2s;
+}
+
+.banners__slide--two.animated .banner__button,
+.banners__slide--two.animated .banner__gallery-item--three {
+  animation-delay: 1.4s;
+}
+
+.banners__slide--two.animated .banner__gallery-item--four {
+  animation-delay: 1.6s;
+}
+
+.banners__slide--two.animated .banner__gallery-item--five {
+  animation-delay: 1.7s;
+}
+
+.banners__slide--two.animated .banner__gallery-item--six {
+  animation-delay: 1.8s;
+}
+
+.banners__slide.animated .banner__title,
+.banners__slide.animated .banner__subtitle,
+.banners__slide.animated .banner__icon,
+.banners__slide.animated .banner__description,
+.banners__slide.animated .banner__button,
+.banners__slide.animated .banner__gallery-item {
+  @include reduce-motion-styles;
+}

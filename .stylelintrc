@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-htmlacademy"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-no-unknown": null
+  }
+}

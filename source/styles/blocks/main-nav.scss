@@ -1,0 +1,153 @@
+.main-nav,
+.main-nav__list,
+.main-nav__item,
+.main-nav__link,
+.main-nav__statistic,
+.main-nav__statistic-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  column-gap: size(21px);
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0 size(11px);
+
+  @include max-tablet {
+    width: 100vw;
+    background-color: $background-main;
+    flex-direction: column;
+    row-gap: 0;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &--opened {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    padding: size-tablet(50px) size-tablet(20px) size-tablet(80px) size-tablet(10px);
+    top: size-tablet(53px);
+  }
+
+  @include mobile {
+    padding: size-mobile(35px) size-mobile(15px) size-mobile(84px) size-mobile(5px);
+    top: size-mobile(53px);
+    row-gap: size-mobile(5px);
+  }
+}
+
+.main-nav__burger {
+  @include desktop {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  font-family: $ff-second;
+  font-size: size(13px);
+  line-height: 110%;
+  letter-spacing: size(-0.4px);
+  text-decoration: none;
+  text-transform: lowercase;
+  border-radius: 12px;
+  color: inherit;
+  padding: size(9px) size(11px);
+  position: relative;
+  transition: all 0.3s ease;
+
+  // &:hover,
+  // &:focus {
+  //   opacity: 0.8;
+  //   transition: all 0.3s ease;
+  // }
+
+  // Вариант с анимацией при hover - может понравится? Но выше есть простой вариант.
+  &:hover,
+  &:focus {
+    transition: transform 0.3s ease;
+
+    &::after {
+      width: 100%;
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: $background-accent;
+    z-index: -1;
+    transition: all 0.3s linear;
+  }
+
+  @include max-tablet {
+    line-height: 115%;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  @include tablet {
+    font-size: size-tablet(28px);
+    letter-spacing: size-tablet(-0.8px);
+    padding: size-tablet(5px) size-tablet(10px);
+  }
+
+  @include mobile {
+    font-size: size-mobile(24px);
+    letter-spacing: size-mobile(-0.7px);
+    padding: size-mobile(5px) size-mobile(10px);
+  }
+}
+
+.main-nav__statistic {
+  column-gap: size(10px);
+
+  @include max-tablet {
+    display: none;
+  }
+}
+
+.main-nav__statistic-counter {
+  font-family: $ff-second;
+  font-size: size(13px);
+  line-height: 110%;
+  letter-spacing: size(-0.5px);
+}
+
+.main-nav__statistic-icon {
+  min-width: size(36px);
+  height: size(36px);
+  color: $color-second;
+  background-color: $color-main;
+  border-radius: 12px;
+}
+
+.main-nav__statistic-icon svg {
+  width: size(20px);
+  height: size(20px);
+}

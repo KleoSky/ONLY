@@ -1,0 +1,202 @@
+.about {
+  display: grid;
+  grid-template-columns: auto auto auto size(250px);
+  grid-template-rows: min-content size(11px) min-content;
+
+  @include tablet {
+    grid-template-columns: repeat(2, size-tablet(363px));
+    grid-template-rows: min-content size-tablet(16px) min-content size-tablet(25px) size-tablet(15px) min-content;
+    column-gap: size-tablet(22px);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(2, size-mobile(172px));
+    grid-template-rows: repeat(2, min-content);
+    row-gap: size-mobile(31px);
+  }
+}
+
+.about__experience {
+  min-width: size(409px);
+  margin-top: size(-15px);
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(2, min-content);
+  gap: size(5px) size(17px);
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+
+  @include max-tablet {
+    min-width: unset;
+    margin: 0;
+    grid-template-columns: min-content max-content;
+    grid-template-rows: max-content min-content;
+  }
+
+  @include tablet {
+    gap: size-tablet(15px) size-tablet(2px);
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+
+  @include mobile {
+    padding-top: size-mobile(20px);
+    gap: size-mobile(10px) 0;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+
+.about__experience-counter {
+  max-width: size(135px);
+  font-family: $ff-second;
+  font-size: size(56px);
+  font-weight: 600;
+  line-height: 90%;
+  letter-spacing: size(-1.7px);
+  margin: 0;
+  margin-top: size(6px);
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+
+  @include max-tablet {
+    margin: 0;
+    grid-row: 1 / 2;
+  }
+
+  @include tablet {
+    max-width: size-tablet(135px);
+    font-size: size-tablet(38px);
+    letter-spacing: size-tablet(-1.1px);
+  }
+
+  @include mobile {
+    max-width: size-mobile(135px);
+    font-size: size-mobile(32px);
+    letter-spacing: size-mobile(-1.9px);
+  }
+}
+
+.about__experience-years {
+  font-size: size(18px);
+  line-height: 1.25;
+  letter-spacing: size(-0.2px);
+  text-transform: lowercase;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @include tablet {
+    font-size: size-tablet($fz-tablet);
+    letter-spacing: size-tablet(-0.1px);
+    margin-top: size-tablet(12px);
+  }
+
+  @include mobile {
+    font-size: size-mobile(16px);
+    line-height: 122%;
+    letter-spacing: size-mobile(-0.2px);
+    margin-top: size-mobile(9px);
+  }
+}
+
+.about__experience-text {
+  max-width: size(200px);
+  font-family: $ff-second;
+  font-size: size(13px);
+  line-height: 1.1;
+  letter-spacing: size(-0.5px);
+  text-transform: lowercase;
+  color: $color-main-transparent;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  @include max-tablet {
+    grid-column: 1 / -1;
+  }
+
+  @include tablet {
+    max-width: size-tablet(200px);
+    font-size: size-tablet(13px);
+    letter-spacing: size-tablet(-0.5px);
+  }
+
+  @include mobile {
+    max-width: size-mobile(152px);
+    font-size: size-mobile(12px);
+    letter-spacing: size-mobile(-0.5px);
+  }
+}
+
+.about__contacts {
+  margin-right: size(130px);
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+
+  @include max-tablet {
+    margin: 0;
+    grid-row: 1 / 2;
+  }
+
+  @include mobile {
+    border-left: 1px solid $color-liner;
+  }
+}
+
+.about__misson {
+  max-width: size(498px);
+  line-height: 1.35;
+  letter-spacing: size(-0.4px);
+  margin: 0 size(58px) size(4px) size(41px);
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+
+  @include tablet {
+    max-width: size-tablet(342px);
+    font-size: size-tablet($fz-tablet);
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: size-tablet(-0.4px);
+    margin: 0;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.about__presentation {
+  max-width: size(300px);
+  margin: size(7px) 0 0 size(40px);
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+
+  @include tablet {
+    margin: 0;
+    margin-top: size-tablet(4px);
+    grid-column: 1 / 2;
+    grid-row: 4 / 7;
+  }
+}
+
+.about__button {
+  margin-top: size(-6px);
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+
+  @include max-tablet {
+    margin: 0;
+  }
+
+  @include tablet {
+    width: size-tablet(217px);
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+  }
+
+  @include mobile {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+}
