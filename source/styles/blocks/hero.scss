@@ -176,9 +176,8 @@
 }
 
 .hero__video {
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-origin: top center;
-  will-change: width, height;
+  width: size(456px);
+  height: size(230px);
 
   @include large-width {
     width: size(456px);

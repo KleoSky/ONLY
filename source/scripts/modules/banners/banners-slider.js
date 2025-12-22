@@ -40,6 +40,7 @@ const initBannersSlider = () => {
     moveSlideList(index);
 
     currentSlide = index;
+    updateButtonsVisibility();
 
     return slides[index];
   };

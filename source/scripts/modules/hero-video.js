@@ -1,3 +1,5 @@
+// Попытка реализации увеличения видео при скролле
+
 const video = document.querySelector('.hero__video');
 const container = document.querySelector('.hero__wrapper') || document.body;
 const videoTopPosition = video.getBoundingClientRect().top + window.scrollY;
